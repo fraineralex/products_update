@@ -47,8 +47,7 @@ class ProductCategoryUpdate(models.Model):
                                 'name': category_name,
                                 'property_valuation': 'real_time',
                                 'property_account_income_categ_id': account_income.id,
-                                'property_cost_method': 'standard',
-                                'company_id': company.id,
+                                'property_cost_method': 'standard'
                             })
 
                         product = product_obj.search([('id', '=', product_id), ('company_id', '=', company.id)], limit=1)
