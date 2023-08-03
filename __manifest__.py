@@ -1,9 +1,9 @@
 {
-    'name': 'Actualizar Productos y Categorías',
+    'name': 'Update Products and Categories',
     'version': '1.0',
-    'summary': 'Actualiza productos y categorías desde un archivo Excel utilizando xlrd',
+    'summary': 'Allows you to massively update products and categories from an Excel file.',
     'description': """
-        Este módulo permite actualizar masivamente productos y categorías desde un archivo Excel utilizando xlrd.
+        This module allows you to massively update products and categories from an Excel file using xlrd.
     """,
     'author': 'Lifter',
     'depends': ['product'],

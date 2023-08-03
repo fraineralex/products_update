@@ -35,7 +35,7 @@ class ProductCategoryUpdate(models.Model):
                     if company:
                         account_income = account_obj.search([('code', '=', account_income_code), ('company_id', '=', company.id)], limit=1)
 
-                        category = category_obj.search([('name', '=', category_name), ('company_id', '=', company.id)], limit=1)
+                        category = category_obj.search([('name', '=', category_name)], limit=1)
                         if category and account_income:
                             if category.property_account_income_categ_id != account_income.id:
                                 category.write({
@@ -54,9 +54,10 @@ class ProductCategoryUpdate(models.Model):
                         product = product_obj.search([('id', '=', product_id), ('company_id', '=', company.id)], limit=1)
 
                         if product:
-                            product.write({
-                                'categ_id': category.id,
-                            })
+                            if product.categ_id != category.id:
+                                product.write({
+                                    'categ_id': category.id,
+                                })
             else:
                 print(f"Error: Unable to fetch Excel file from {excel_url}")
         except requests.exceptions.RequestException as e:
