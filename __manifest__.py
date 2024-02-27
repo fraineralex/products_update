@@ -5,7 +5,7 @@
     'description': """
         This module allows you to massively update products and categories from an Excel file using xlrd.
     """,
-    'author': 'Lifter',
+    'author': 'Frainer Encarnación',
     'depends': ['product'],
     'data': [],
     'installable': True,
